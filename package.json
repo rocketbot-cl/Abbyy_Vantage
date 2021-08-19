@@ -1,0 +1,175 @@
+{
+    "author":"Caleb Cipra",
+    "description": "Módulo para interactuar con Abbyy Vantage",
+    "disclaimer":"THERE IS NO WARRANTY FOR THE PROGRAM, TO THE EXTENT PERMITTED BY APPLICABLE LAW. EXCEPT WHEN OTHERWISE STATED IN WRITING THE COPYRIGHT HOLDERS AND/OR OTHER PARTIES PROVIDE THE PROGRAM “AS IS” WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. THE ENTIRE RISK AS TO THE QUALITY AND PERFORMANCE OF THE PROGRAM IS WITH YOU. SHOULD THE PROGRAM PROVE DEFECTIVE, YOU ASSUME THE COST OF ALL NECESSARY SERVICING, REPAIR OR CORRECTION.",
+    "version":"1.0",
+    "license": "MIT",
+    "homepage":"http://rocketbot.co/",
+    "linux": false,
+    "windows":true,
+    "mac":false,
+    "docker":false,
+    "name": "Abbyy_Vantage",
+    "dependencies": {
+        "requests": "2.26.0"
+    },
+    "title": {
+        "en": "Abbyy Vantage",
+        "es": "Abbyy Vantage"
+    },
+    "icon": "data:image/svg+xml;base64,PHN2ZyBpZD0iQ2FwYV8xIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA1MTIgNTEyIiBoZWlnaHQ9IjUxMiIgdmlld0JveD0iMCAwIDUxMiA1MTIiIHdpZHRoPSI1MTIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGc+PHBhdGggZD0ibTM5Ni4zODcgNDcwLjcxaC0yNzIuNTE2Yy00LjU2MSAwLTguMjU4LTMuNjk3LTguMjU4LTguMjU4di00MjEuMTYyYzAtNC41NjEgMy42OTctOC4yNTggOC4yNTgtOC4yNThoMjcyLjUxNmM0LjU2MSAwIDguMjU4IDMuNjk3IDguMjU4IDguMjU4djQyMS4xNjFjMCA0LjU2MS0zLjY5NyA4LjI1OS04LjI1OCA4LjI1OXoiIGZpbGw9IiNlY2VhZWMiLz48cGF0aCBkPSJtMTQ4LjY0NSA0NjIuNDUyYy0xMy42ODIgMC0yNC43NzQtMTEuMDkyLTI0Ljc3NC0yNC43NzR2LTQwNC42NDZoLTguMjU4Yy00LjU2MSAwLTguMjU4IDMuNjk3LTguMjU4IDguMjU4djQyOS40MmMwIDQuNTYxIDMuNjk3IDguMjU4IDguMjU4IDguMjU4aDI4MC43NzRjNC41NjEgMCA4LjI1OC0zLjY5NyA4LjI1OC04LjI1OHYtOC4yNTh6IiBmaWxsPSIjZGFkOGRiIi8+PHBhdGggZD0ibTQ4Ny4yMjYgMTMyLjEyOWgtNDYyLjQ1MmMtMi44OTUgMC01LjY3My40OTctOC4yNTUgMS40MDlsLTcuNjI3IDIzLjM2NnYxOTEuMzIyYzAgMTMuNjgyIDExLjA5MiAyNC43NzQgMjQuNzc1IDI0Ljc3NGg0NTMuNTU5bDIzLjM3NC05LjY0NWMuOTEyLTIuNTgzIDEuNC01LjM2NCAxLjQtOC4yNTh2LTE5OC4xOTRjMC0xMy42ODItMTEuMDkyLTI0Ljc3NC0yNC43NzQtMjQuNzc0eiIgZmlsbD0iIzVkNTM2MCIvPjxwYXRoIGQ9Im0zMy4wMzIgMzYzLjM1NWMtOS4xMjEgMC0xNi41MTYtNy4zOTUtMTYuNTE2LTE2LjUxNnYtMjEzLjMxYy05LjYgMy40MTMtMTYuNTE2IDEyLjYwMy0xNi41MTYgMjMuMzc0djE5OC4xOTRjMCAxMy42ODIgMTEuMDkyIDI0Ljc3NCAyNC43NzQgMjQuNzc0aDQ2Mi40NTJjMTAuNzcxIDAgMTkuOTYxLTYuOTE2IDIzLjM3NC0xNi41MTZoLTM5Ljg5bC0xMi4yMS03LjM1NWgtNDAzLjVsLTEzLjcxIDcuMzU1eiIgZmlsbD0iIzRiM2Y0ZSIvPjxwYXRoIGQ9Im00NzAuNzEgMzYzLjM1NWgtNDI5LjQyYy00LjU2MSAwLTguMjU4LTMuNjk3LTguMjU4LTguMjU4di0xOTguMTk0YzAtNC41NjEgMy42OTctOC4yNTggOC4yNTgtOC4yNThoNDI5LjQyYzQuNTYxIDAgOC4yNTggMy42OTcgOC4yNTggOC4yNTh2MTk4LjE5NGMwIDQuNTYxLTMuNjk4IDguMjU4LTguMjU4IDguMjU4eiIgZmlsbD0iI2U5ZjZmZiIvPjxwYXRoIGQ9Im00MzcuNjc3IDM0Ni44MzloLTM2My4zNTRjLTEzLjY4MiAwLTI0Ljc3NC0xMS4wOTItMjQuNzc0LTI0Ljc3NHYtMTMyLjEzYzAtMTMuNjgyIDExLjA5Mi0yNC43NzQgMjQuNzc0LTI0Ljc3NGgzNjMuMzU1YzEzLjY4MiAwIDI0Ljc3NCAxMS4wOTIgMjQuNzc0IDI0Ljc3NHYxMzIuMTI5YzAgMTMuNjgzLTExLjA5MiAyNC43NzUtMjQuNzc1IDI0Ljc3NXoiIGZpbGw9IiNmZmYiLz48cGF0aCBkPSJtMzQ2LjgzOSAxMTUuNjEzaC0xODEuNjc4Yy00LjU2NSAwLTguMjU4LTMuNjk4LTguMjU4LTguMjU4czMuNjk0LTguMjU4IDguMjU4LTguMjU4aDE4MS42NzdjNC41NjUgMCA4LjI1OCAzLjY5OCA4LjI1OCA4LjI1OC4wMDEgNC41Ni0zLjY5MyA4LjI1OC04LjI1NyA4LjI1OHoiIGZpbGw9IiM1ZDUzNjAiLz48cGF0aCBkPSJtMzA1LjU0OCA4Mi41ODFoLTE0MC4zODdjLTQuNTY1IDAtOC4yNTgtMy42OTgtOC4yNTgtOC4yNThzMy42OTQtOC4yNTggOC4yNTgtOC4yNThoMTQwLjM4N2M0LjU2NSAwIDguMjU4IDMuNjk4IDguMjU4IDguMjU4cy0zLjY5MyA4LjI1OC04LjI1OCA4LjI1OHoiIGZpbGw9IiM2ZjY1NzEiLz48cGF0aCBkPSJtMzQ2LjgzOSA0MTIuOTAzaC0xODEuNjc4Yy00LjU2NSAwLTguMjU4LTMuNjk4LTguMjU4LTguMjU4czMuNjk0LTguMjU4IDguMjU4LTguMjU4aDE4MS42NzdjNC41NjUgMCA4LjI1OCAzLjY5OCA4LjI1OCA4LjI1OHMtMy42OTMgOC4yNTgtOC4yNTcgOC4yNTh6IiBmaWxsPSIjNWQ1MzYwIi8+PGcgZmlsbD0iIzliZDdlZSI+PHBhdGggZD0ibTE0OC42NDUgMTY1LjE2MWgtNDEuMjljLTQuNTY1IDAtOC4yNTggMy42OTgtOC4yNTggOC4yNTh2NDEuMjljMCA0LjU2IDMuNjk0IDguMjU4IDguMjU4IDguMjU4IDQuNTY1IDAgOC4yNTgtMy42OTggOC4yNTgtOC4yNTh2LTMzLjAzMmgzMy4wMzJjNC41NjUgMCA4LjI1OC0zLjY5OCA4LjI1OC04LjI1OHMtMy42OTMtOC4yNTgtOC4yNTgtOC4yNTh6Ii8+PHBhdGggZD0ibTE0OC42NDUgMzMwLjMyM2gtMzMuMDMydi0zMy4wMzNjMC00LjU2LTMuNjk0LTguMjU4LTguMjU4LTguMjU4LTQuNTY1IDAtOC4yNTggMy42OTgtOC4yNTggOC4yNTh2NDEuMjljMCA0LjU2IDMuNjk0IDguMjU4IDguMjU4IDguMjU4aDQxLjI5YzQuNTY1IDAgOC4yNTgtMy42OTggOC4yNTgtOC4yNThzLTMuNjkzLTguMjU3LTguMjU4LTguMjU3eiIvPjxwYXRoIGQ9Im00MDQuNjQ1IDI4OS4wMzJjLTQuNTY1IDAtOC4yNTggMy42OTgtOC4yNTggOC4yNTh2MzMuMDMyaC0zMy4wMzJjLTQuNTY1IDAtOC4yNTggMy42OTgtOC4yNTggOC4yNThzMy42OTQgOC4yNTggOC4yNTggOC4yNThoNDEuMjljNC41NjUgMCA4LjI1OC0zLjY5OCA4LjI1OC04LjI1OHYtNDEuMjljMC00LjU2LTMuNjkzLTguMjU4LTguMjU4LTguMjU4eiIvPjxwYXRoIGQ9Im00MDQuNjQ1IDE2NS4xNjFoLTQxLjI5Yy00LjU2NSAwLTguMjU4IDMuNjk4LTguMjU4IDguMjU4czMuNjk0IDguMjU4IDguMjU4IDguMjU4aDMzLjAzMnYzMy4wMzJjMCA0LjU2IDMuNjk0IDguMjU4IDguMjU4IDguMjU4czguMjU4LTMuNjk4IDguMjU4LTguMjU4di00MS4yOWMwLTQuNTYtMy42OTMtOC4yNTgtOC4yNTgtOC4yNTh6Ii8+PC9nPjxwYXRoIGQ9Im0yNjYuODE1IDE4My42NDFjLTEuNzc0LTQuMjk4LTUuOTE5LTcuMDczLTEwLjU3My03LjA3My0uMDA4IDAtLjAwOCAwLS4wMTYgMC00LjY1My4wMDgtOC44MDYgMi43OTgtMTAuNjM3IDcuMjlsLTUyLjU3MyAxMzguMDJjLTEuNjIxIDQuMjYyLjUxNiA5LjAzMiA0Ljc3NCAxMC42NTcuOTY4LjM2NyAxLjk2OC41NDQgMi45NDQuNTQ0IDMuMzIzIDAgNi40Ni0yLjAyOCA3LjcxOC01LjMyM2wxMS4wNjctMjkuMDU2aDczLjA2NmwxMC45NTcgMjkuMDMyYzEuNjEzIDQuMjY2IDYuMzcxIDYuNDIzIDEwLjY0NSA0LjgxIDQuMjY2LTEuNjA5IDYuNDE5LTYuMzc1IDQuODA2LTEwLjY0MXptLTQxLjAwNyA5OC41NDQgMzAuNDA5LTc5Ljg0MyAzMC4xMzMgNzkuODQzeiIgZmlsbD0iIzVkNTM2MCIvPjxwYXRoIGQ9Im0zNDYuODM5IDQ0NS45MzVoLTE0MC4zODdjLTQuNTY1IDAtOC4yNTgtMy42OTgtOC4yNTgtOC4yNThzMy42OTQtOC4yNTggOC4yNTgtOC4yNThoMTQwLjM4N2M0LjU2NSAwIDguMjU4IDMuNjk4IDguMjU4IDguMjU4cy0zLjY5NCA4LjI1OC04LjI1OCA4LjI1OHoiIGZpbGw9IiM2ZjY1NzEiLz48L2c+PC9zdmc+",
+    "children": [
+        {
+            "en": {
+                "title": "Connects to Abbyy Vantage",
+                "description": "Connects to Abbyy Vantage",
+                "title_options": "Select Option",
+                "options":null
+            },
+            "es": {
+                "title": "Conectar a Abbyy Vantage",
+                "description": "Conectar a Abbyy Vantage",
+                "title_options": "Seleccione una opción",
+                "options": null
+            },
+            "form": {
+                "css": "modal-lg",
+                "inputs": [
+                    {
+                        "type": "input",
+                        "placeholder": {
+                            "es": "usuario",
+                            "en": "username"
+                        },
+                        "title": {
+                            "es": "Nombre de usuario:",
+                            "en": "Username:"
+                        },
+                        "id": "username",
+                        "css": "col-md-6"
+                    },
+                    {
+                        "type": "input",
+                        "placeholder": {
+                            "es": "********",
+                            "en": "********"
+                        },
+                        "title": {
+                            "es": "Password",
+                            "en": "Password:"
+                        },
+                        "id": "password",
+                        "css": "col-md-6"
+                    },
+                    {
+                        "type": "input",
+                        "placeholder": {
+                            "es": "Variable",
+                            "en": "Variable"
+                        },
+                        "title": {
+                            "es": "Asignar resultado a variable:",
+                            "en": "Assign result to variable:"
+                        },
+                        "help": {
+                            "es": "Nombre de variable sin {}",
+                            "en": "Variable name without {}"
+                        },
+                        "remove_vars" : true,
+                        "id": "whereToStore",
+                        "css": "col-md-6"
+                    }
+                ]
+            },
+            "video_youtube": "",
+            "icon": "data:image/svg+xml;base64,PHN2ZyBpZD0iQ2FwYV8xIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA1MTIgNTEyIiBoZWlnaHQ9IjUxMiIgdmlld0JveD0iMCAwIDUxMiA1MTIiIHdpZHRoPSI1MTIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGc+PHBhdGggZD0ibTM5Ni4zODcgNDcwLjcxaC0yNzIuNTE2Yy00LjU2MSAwLTguMjU4LTMuNjk3LTguMjU4LTguMjU4di00MjEuMTYyYzAtNC41NjEgMy42OTctOC4yNTggOC4yNTgtOC4yNThoMjcyLjUxNmM0LjU2MSAwIDguMjU4IDMuNjk3IDguMjU4IDguMjU4djQyMS4xNjFjMCA0LjU2MS0zLjY5NyA4LjI1OS04LjI1OCA4LjI1OXoiIGZpbGw9IiNlY2VhZWMiLz48cGF0aCBkPSJtMTQ4LjY0NSA0NjIuNDUyYy0xMy42ODIgMC0yNC43NzQtMTEuMDkyLTI0Ljc3NC0yNC43NzR2LTQwNC42NDZoLTguMjU4Yy00LjU2MSAwLTguMjU4IDMuNjk3LTguMjU4IDguMjU4djQyOS40MmMwIDQuNTYxIDMuNjk3IDguMjU4IDguMjU4IDguMjU4aDI4MC43NzRjNC41NjEgMCA4LjI1OC0zLjY5NyA4LjI1OC04LjI1OHYtOC4yNTh6IiBmaWxsPSIjZGFkOGRiIi8+PHBhdGggZD0ibTQ4Ny4yMjYgMTMyLjEyOWgtNDYyLjQ1MmMtMi44OTUgMC01LjY3My40OTctOC4yNTUgMS40MDlsLTcuNjI3IDIzLjM2NnYxOTEuMzIyYzAgMTMuNjgyIDExLjA5MiAyNC43NzQgMjQuNzc1IDI0Ljc3NGg0NTMuNTU5bDIzLjM3NC05LjY0NWMuOTEyLTIuNTgzIDEuNC01LjM2NCAxLjQtOC4yNTh2LTE5OC4xOTRjMC0xMy42ODItMTEuMDkyLTI0Ljc3NC0yNC43NzQtMjQuNzc0eiIgZmlsbD0iIzVkNTM2MCIvPjxwYXRoIGQ9Im0zMy4wMzIgMzYzLjM1NWMtOS4xMjEgMC0xNi41MTYtNy4zOTUtMTYuNTE2LTE2LjUxNnYtMjEzLjMxYy05LjYgMy40MTMtMTYuNTE2IDEyLjYwMy0xNi41MTYgMjMuMzc0djE5OC4xOTRjMCAxMy42ODIgMTEuMDkyIDI0Ljc3NCAyNC43NzQgMjQuNzc0aDQ2Mi40NTJjMTAuNzcxIDAgMTkuOTYxLTYuOTE2IDIzLjM3NC0xNi41MTZoLTM5Ljg5bC0xMi4yMS03LjM1NWgtNDAzLjVsLTEzLjcxIDcuMzU1eiIgZmlsbD0iIzRiM2Y0ZSIvPjxwYXRoIGQ9Im00NzAuNzEgMzYzLjM1NWgtNDI5LjQyYy00LjU2MSAwLTguMjU4LTMuNjk3LTguMjU4LTguMjU4di0xOTguMTk0YzAtNC41NjEgMy42OTctOC4yNTggOC4yNTgtOC4yNThoNDI5LjQyYzQuNTYxIDAgOC4yNTggMy42OTcgOC4yNTggOC4yNTh2MTk4LjE5NGMwIDQuNTYxLTMuNjk4IDguMjU4LTguMjU4IDguMjU4eiIgZmlsbD0iI2U5ZjZmZiIvPjxwYXRoIGQ9Im00MzcuNjc3IDM0Ni44MzloLTM2My4zNTRjLTEzLjY4MiAwLTI0Ljc3NC0xMS4wOTItMjQuNzc0LTI0Ljc3NHYtMTMyLjEzYzAtMTMuNjgyIDExLjA5Mi0yNC43NzQgMjQuNzc0LTI0Ljc3NGgzNjMuMzU1YzEzLjY4MiAwIDI0Ljc3NCAxMS4wOTIgMjQuNzc0IDI0Ljc3NHYxMzIuMTI5YzAgMTMuNjgzLTExLjA5MiAyNC43NzUtMjQuNzc1IDI0Ljc3NXoiIGZpbGw9IiNmZmYiLz48cGF0aCBkPSJtMzQ2LjgzOSAxMTUuNjEzaC0xODEuNjc4Yy00LjU2NSAwLTguMjU4LTMuNjk4LTguMjU4LTguMjU4czMuNjk0LTguMjU4IDguMjU4LTguMjU4aDE4MS42NzdjNC41NjUgMCA4LjI1OCAzLjY5OCA4LjI1OCA4LjI1OC4wMDEgNC41Ni0zLjY5MyA4LjI1OC04LjI1NyA4LjI1OHoiIGZpbGw9IiM1ZDUzNjAiLz48cGF0aCBkPSJtMzA1LjU0OCA4Mi41ODFoLTE0MC4zODdjLTQuNTY1IDAtOC4yNTgtMy42OTgtOC4yNTgtOC4yNThzMy42OTQtOC4yNTggOC4yNTgtOC4yNThoMTQwLjM4N2M0LjU2NSAwIDguMjU4IDMuNjk4IDguMjU4IDguMjU4cy0zLjY5MyA4LjI1OC04LjI1OCA4LjI1OHoiIGZpbGw9IiM2ZjY1NzEiLz48cGF0aCBkPSJtMzQ2LjgzOSA0MTIuOTAzaC0xODEuNjc4Yy00LjU2NSAwLTguMjU4LTMuNjk4LTguMjU4LTguMjU4czMuNjk0LTguMjU4IDguMjU4LTguMjU4aDE4MS42NzdjNC41NjUgMCA4LjI1OCAzLjY5OCA4LjI1OCA4LjI1OHMtMy42OTMgOC4yNTgtOC4yNTcgOC4yNTh6IiBmaWxsPSIjNWQ1MzYwIi8+PGcgZmlsbD0iIzliZDdlZSI+PHBhdGggZD0ibTE0OC42NDUgMTY1LjE2MWgtNDEuMjljLTQuNTY1IDAtOC4yNTggMy42OTgtOC4yNTggOC4yNTh2NDEuMjljMCA0LjU2IDMuNjk0IDguMjU4IDguMjU4IDguMjU4IDQuNTY1IDAgOC4yNTgtMy42OTggOC4yNTgtOC4yNTh2LTMzLjAzMmgzMy4wMzJjNC41NjUgMCA4LjI1OC0zLjY5OCA4LjI1OC04LjI1OHMtMy42OTMtOC4yNTgtOC4yNTgtOC4yNTh6Ii8+PHBhdGggZD0ibTE0OC42NDUgMzMwLjMyM2gtMzMuMDMydi0zMy4wMzNjMC00LjU2LTMuNjk0LTguMjU4LTguMjU4LTguMjU4LTQuNTY1IDAtOC4yNTggMy42OTgtOC4yNTggOC4yNTh2NDEuMjljMCA0LjU2IDMuNjk0IDguMjU4IDguMjU4IDguMjU4aDQxLjI5YzQuNTY1IDAgOC4yNTgtMy42OTggOC4yNTgtOC4yNThzLTMuNjkzLTguMjU3LTguMjU4LTguMjU3eiIvPjxwYXRoIGQ9Im00MDQuNjQ1IDI4OS4wMzJjLTQuNTY1IDAtOC4yNTggMy42OTgtOC4yNTggOC4yNTh2MzMuMDMyaC0zMy4wMzJjLTQuNTY1IDAtOC4yNTggMy42OTgtOC4yNTggOC4yNThzMy42OTQgOC4yNTggOC4yNTggOC4yNThoNDEuMjljNC41NjUgMCA4LjI1OC0zLjY5OCA4LjI1OC04LjI1OHYtNDEuMjljMC00LjU2LTMuNjkzLTguMjU4LTguMjU4LTguMjU4eiIvPjxwYXRoIGQ9Im00MDQuNjQ1IDE2NS4xNjFoLTQxLjI5Yy00LjU2NSAwLTguMjU4IDMuNjk4LTguMjU4IDguMjU4czMuNjk0IDguMjU4IDguMjU4IDguMjU4aDMzLjAzMnYzMy4wMzJjMCA0LjU2IDMuNjk0IDguMjU4IDguMjU4IDguMjU4czguMjU4LTMuNjk4IDguMjU4LTguMjU4di00MS4yOWMwLTQuNTYtMy42OTMtOC4yNTgtOC4yNTgtOC4yNTh6Ii8+PC9nPjxwYXRoIGQ9Im0yNjYuODE1IDE4My42NDFjLTEuNzc0LTQuMjk4LTUuOTE5LTcuMDczLTEwLjU3My03LjA3My0uMDA4IDAtLjAwOCAwLS4wMTYgMC00LjY1My4wMDgtOC44MDYgMi43OTgtMTAuNjM3IDcuMjlsLTUyLjU3MyAxMzguMDJjLTEuNjIxIDQuMjYyLjUxNiA5LjAzMiA0Ljc3NCAxMC42NTcuOTY4LjM2NyAxLjk2OC41NDQgMi45NDQuNTQ0IDMuMzIzIDAgNi40Ni0yLjAyOCA3LjcxOC01LjMyM2wxMS4wNjctMjkuMDU2aDczLjA2NmwxMC45NTcgMjkuMDMyYzEuNjEzIDQuMjY2IDYuMzcxIDYuNDIzIDEwLjY0NSA0LjgxIDQuMjY2LTEuNjA5IDYuNDE5LTYuMzc1IDQuODA2LTEwLjY0MXptLTQxLjAwNyA5OC41NDQgMzAuNDA5LTc5Ljg0MyAzMC4xMzMgNzkuODQzeiIgZmlsbD0iIzVkNTM2MCIvPjxwYXRoIGQ9Im0zNDYuODM5IDQ0NS45MzVoLTE0MC4zODdjLTQuNTY1IDAtOC4yNTgtMy42OTgtOC4yNTgtOC4yNThzMy42OTQtOC4yNTggOC4yNTgtOC4yNThoMTQwLjM4N2M0LjU2NSAwIDguMjU4IDMuNjk4IDguMjU4IDguMjU4cy0zLjY5NCA4LjI1OC04LjI1OCA4LjI1OHoiIGZpbGw9IiM2ZjY1NzEiLz48L2c+PC9zdmc+",
+            "module": "connectToAbbyy",
+            "module_name": "Abbyy_Vantage",
+            "visible": true,
+            "options": false,
+            "father": "module",
+            "group": "scripts",
+            "linux": false,
+            "windows":true,
+            "mac":false,
+            "docker":false
+        },
+        {
+            "en": {
+                "title": "Upload image to analyze",
+                "description": "Upload an image to analyze",
+                "title_options": "Select Option",
+                "options":null
+            },
+            "es": {
+                "title": "Subir imagen para analizar",
+                "description": "Subir una imagen para analizar",
+                "title_options": "Seleccione una opción",
+                "options": null
+            },
+            "form": {
+                "css": "modal-lg",
+                "inputs": [
+                    {
+                        "type": "html",
+                        "title": {
+                            "es": "Seleccione el skill a usar",
+                            "en": "Select the skill to use"
+                        },
+                        "src": "index.html",
+                        "id": "html",
+                        "css": "col-md-12",
+                        "style": "height:100px;"
+                    },
+                    {
+                        "type": "file_select",
+                        "placeholder": {
+                            "es": "C:/Usuario/Documentos",
+                            "en": "C:/User/Documents"
+                        },
+                        "title": {
+                            "es": "Seleccionar un archivo:",
+                            "en": "Select a file:"
+                        },
+                        "help": {
+                            "es": "Ruta donde está el archivo",
+                            "en": "Path to file"
+                        },
+                        "id": "fileToRead",
+                        "css": "col-md-6"
+                    },
+                    {
+                        "type": "input",
+                        "placeholder": {
+                            "es": "Variable",
+                            "en": "Variable"
+                        },
+                        "title": {
+                            "es": "Asignar resultado a variable:",
+                            "en": "Assign result to variable:"
+                        },
+                        "help": {
+                            "es": "Nombre de variable sin {}",
+                            "en": "Variable name without {}"
+                        },
+                        "remove_vars" : true,
+                        "id": "whereToStore",
+                        "css": "col-md-6"
+                    }
+                ]
+            },
+            "video_youtube": "",
+            "icon": "data:image/svg+xml;base64,PHN2ZyBpZD0iQ2FwYV8xIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA1MTIgNTEyIiBoZWlnaHQ9IjUxMiIgdmlld0JveD0iMCAwIDUxMiA1MTIiIHdpZHRoPSI1MTIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGc+PHBhdGggZD0ibTM5Ni4zODcgNDcwLjcxaC0yNzIuNTE2Yy00LjU2MSAwLTguMjU4LTMuNjk3LTguMjU4LTguMjU4di00MjEuMTYyYzAtNC41NjEgMy42OTctOC4yNTggOC4yNTgtOC4yNThoMjcyLjUxNmM0LjU2MSAwIDguMjU4IDMuNjk3IDguMjU4IDguMjU4djQyMS4xNjFjMCA0LjU2MS0zLjY5NyA4LjI1OS04LjI1OCA4LjI1OXoiIGZpbGw9IiNlY2VhZWMiLz48cGF0aCBkPSJtMTQ4LjY0NSA0NjIuNDUyYy0xMy42ODIgMC0yNC43NzQtMTEuMDkyLTI0Ljc3NC0yNC43NzR2LTQwNC42NDZoLTguMjU4Yy00LjU2MSAwLTguMjU4IDMuNjk3LTguMjU4IDguMjU4djQyOS40MmMwIDQuNTYxIDMuNjk3IDguMjU4IDguMjU4IDguMjU4aDI4MC43NzRjNC41NjEgMCA4LjI1OC0zLjY5NyA4LjI1OC04LjI1OHYtOC4yNTh6IiBmaWxsPSIjZGFkOGRiIi8+PHBhdGggZD0ibTQ4Ny4yMjYgMTMyLjEyOWgtNDYyLjQ1MmMtMi44OTUgMC01LjY3My40OTctOC4yNTUgMS40MDlsLTcuNjI3IDIzLjM2NnYxOTEuMzIyYzAgMTMuNjgyIDExLjA5MiAyNC43NzQgMjQuNzc1IDI0Ljc3NGg0NTMuNTU5bDIzLjM3NC05LjY0NWMuOTEyLTIuNTgzIDEuNC01LjM2NCAxLjQtOC4yNTh2LTE5OC4xOTRjMC0xMy42ODItMTEuMDkyLTI0Ljc3NC0yNC43NzQtMjQuNzc0eiIgZmlsbD0iIzVkNTM2MCIvPjxwYXRoIGQ9Im0zMy4wMzIgMzYzLjM1NWMtOS4xMjEgMC0xNi41MTYtNy4zOTUtMTYuNTE2LTE2LjUxNnYtMjEzLjMxYy05LjYgMy40MTMtMTYuNTE2IDEyLjYwMy0xNi41MTYgMjMuMzc0djE5OC4xOTRjMCAxMy42ODIgMTEuMDkyIDI0Ljc3NCAyNC43NzQgMjQuNzc0aDQ2Mi40NTJjMTAuNzcxIDAgMTkuOTYxLTYuOTE2IDIzLjM3NC0xNi41MTZoLTM5Ljg5bC0xMi4yMS03LjM1NWgtNDAzLjVsLTEzLjcxIDcuMzU1eiIgZmlsbD0iIzRiM2Y0ZSIvPjxwYXRoIGQ9Im00NzAuNzEgMzYzLjM1NWgtNDI5LjQyYy00LjU2MSAwLTguMjU4LTMuNjk3LTguMjU4LTguMjU4di0xOTguMTk0YzAtNC41NjEgMy42OTctOC4yNTggOC4yNTgtOC4yNThoNDI5LjQyYzQuNTYxIDAgOC4yNTggMy42OTcgOC4yNTggOC4yNTh2MTk4LjE5NGMwIDQuNTYxLTMuNjk4IDguMjU4LTguMjU4IDguMjU4eiIgZmlsbD0iI2U5ZjZmZiIvPjxwYXRoIGQ9Im00MzcuNjc3IDM0Ni44MzloLTM2My4zNTRjLTEzLjY4MiAwLTI0Ljc3NC0xMS4wOTItMjQuNzc0LTI0Ljc3NHYtMTMyLjEzYzAtMTMuNjgyIDExLjA5Mi0yNC43NzQgMjQuNzc0LTI0Ljc3NGgzNjMuMzU1YzEzLjY4MiAwIDI0Ljc3NCAxMS4wOTIgMjQuNzc0IDI0Ljc3NHYxMzIuMTI5YzAgMTMuNjgzLTExLjA5MiAyNC43NzUtMjQuNzc1IDI0Ljc3NXoiIGZpbGw9IiNmZmYiLz48cGF0aCBkPSJtMzQ2LjgzOSAxMTUuNjEzaC0xODEuNjc4Yy00LjU2NSAwLTguMjU4LTMuNjk4LTguMjU4LTguMjU4czMuNjk0LTguMjU4IDguMjU4LTguMjU4aDE4MS42NzdjNC41NjUgMCA4LjI1OCAzLjY5OCA4LjI1OCA4LjI1OC4wMDEgNC41Ni0zLjY5MyA4LjI1OC04LjI1NyA4LjI1OHoiIGZpbGw9IiM1ZDUzNjAiLz48cGF0aCBkPSJtMzA1LjU0OCA4Mi41ODFoLTE0MC4zODdjLTQuNTY1IDAtOC4yNTgtMy42OTgtOC4yNTgtOC4yNThzMy42OTQtOC4yNTggOC4yNTgtOC4yNThoMTQwLjM4N2M0LjU2NSAwIDguMjU4IDMuNjk4IDguMjU4IDguMjU4cy0zLjY5MyA4LjI1OC04LjI1OCA4LjI1OHoiIGZpbGw9IiM2ZjY1NzEiLz48cGF0aCBkPSJtMzQ2LjgzOSA0MTIuOTAzaC0xODEuNjc4Yy00LjU2NSAwLTguMjU4LTMuNjk4LTguMjU4LTguMjU4czMuNjk0LTguMjU4IDguMjU4LTguMjU4aDE4MS42NzdjNC41NjUgMCA4LjI1OCAzLjY5OCA4LjI1OCA4LjI1OHMtMy42OTMgOC4yNTgtOC4yNTcgOC4yNTh6IiBmaWxsPSIjNWQ1MzYwIi8+PGcgZmlsbD0iIzliZDdlZSI+PHBhdGggZD0ibTE0OC42NDUgMTY1LjE2MWgtNDEuMjljLTQuNTY1IDAtOC4yNTggMy42OTgtOC4yNTggOC4yNTh2NDEuMjljMCA0LjU2IDMuNjk0IDguMjU4IDguMjU4IDguMjU4IDQuNTY1IDAgOC4yNTgtMy42OTggOC4yNTgtOC4yNTh2LTMzLjAzMmgzMy4wMzJjNC41NjUgMCA4LjI1OC0zLjY5OCA4LjI1OC04LjI1OHMtMy42OTMtOC4yNTgtOC4yNTgtOC4yNTh6Ii8+PHBhdGggZD0ibTE0OC42NDUgMzMwLjMyM2gtMzMuMDMydi0zMy4wMzNjMC00LjU2LTMuNjk0LTguMjU4LTguMjU4LTguMjU4LTQuNTY1IDAtOC4yNTggMy42OTgtOC4yNTggOC4yNTh2NDEuMjljMCA0LjU2IDMuNjk0IDguMjU4IDguMjU4IDguMjU4aDQxLjI5YzQuNTY1IDAgOC4yNTgtMy42OTggOC4yNTgtOC4yNThzLTMuNjkzLTguMjU3LTguMjU4LTguMjU3eiIvPjxwYXRoIGQ9Im00MDQuNjQ1IDI4OS4wMzJjLTQuNTY1IDAtOC4yNTggMy42OTgtOC4yNTggOC4yNTh2MzMuMDMyaC0zMy4wMzJjLTQuNTY1IDAtOC4yNTggMy42OTgtOC4yNTggOC4yNThzMy42OTQgOC4yNTggOC4yNTggOC4yNThoNDEuMjljNC41NjUgMCA4LjI1OC0zLjY5OCA4LjI1OC04LjI1OHYtNDEuMjljMC00LjU2LTMuNjkzLTguMjU4LTguMjU4LTguMjU4eiIvPjxwYXRoIGQ9Im00MDQuNjQ1IDE2NS4xNjFoLTQxLjI5Yy00LjU2NSAwLTguMjU4IDMuNjk4LTguMjU4IDguMjU4czMuNjk0IDguMjU4IDguMjU4IDguMjU4aDMzLjAzMnYzMy4wMzJjMCA0LjU2IDMuNjk0IDguMjU4IDguMjU4IDguMjU4czguMjU4LTMuNjk4IDguMjU4LTguMjU4di00MS4yOWMwLTQuNTYtMy42OTMtOC4yNTgtOC4yNTgtOC4yNTh6Ii8+PC9nPjxwYXRoIGQ9Im0yNjYuODE1IDE4My42NDFjLTEuNzc0LTQuMjk4LTUuOTE5LTcuMDczLTEwLjU3My03LjA3My0uMDA4IDAtLjAwOCAwLS4wMTYgMC00LjY1My4wMDgtOC44MDYgMi43OTgtMTAuNjM3IDcuMjlsLTUyLjU3MyAxMzguMDJjLTEuNjIxIDQuMjYyLjUxNiA5LjAzMiA0Ljc3NCAxMC42NTcuOTY4LjM2NyAxLjk2OC41NDQgMi45NDQuNTQ0IDMuMzIzIDAgNi40Ni0yLjAyOCA3LjcxOC01LjMyM2wxMS4wNjctMjkuMDU2aDczLjA2NmwxMC45NTcgMjkuMDMyYzEuNjEzIDQuMjY2IDYuMzcxIDYuNDIzIDEwLjY0NSA0LjgxIDQuMjY2LTEuNjA5IDYuNDE5LTYuMzc1IDQuODA2LTEwLjY0MXptLTQxLjAwNyA5OC41NDQgMzAuNDA5LTc5Ljg0MyAzMC4xMzMgNzkuODQzeiIgZmlsbD0iIzVkNTM2MCIvPjxwYXRoIGQ9Im0zNDYuODM5IDQ0NS45MzVoLTE0MC4zODdjLTQuNTY1IDAtOC4yNTgtMy42OTgtOC4yNTgtOC4yNThzMy42OTQtOC4yNTggOC4yNTgtOC4yNThoMTQwLjM4N2M0LjU2NSAwIDguMjU4IDMuNjk4IDguMjU4IDguMjU4cy0zLjY5NCA4LjI1OC04LjI1OCA4LjI1OHoiIGZpbGw9IiM2ZjY1NzEiLz48L2c+PC9zdmc+",
+            "module": "readFile",
+            "module_name": "Abbyy_Vantage",
+            "visible": true,
+            "options": false,
+            "father": "module",
+            "group": "scripts",
+            "linux": false,
+            "windows":true,
+            "mac":false,
+            "docker":false
+        }
+    ]
+}
