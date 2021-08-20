@@ -6,11 +6,11 @@ Module to interact with Abbyy Vantage.
 
 ## Overview
 
-The Abbyy_Vantage command enables users to interact with Abbyy Vantage skills and functionalities.
+The Abbyy_Vantage command enables users to interact with Abbyy Vantage's skills and functionalities.
 
 
 1. #### Connects to Abbyy Vantage
-    Connects with your Abbyy's account.
+    Connects to your Abbyy's account.
     > Results: True | False
     
 
