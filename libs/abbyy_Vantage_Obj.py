@@ -42,12 +42,12 @@ class Abbyy_Vantage_Obj:
         
         return(self.skills)
 
-    def transaction(self, skillId):
+    def transaction(self, skillId, fileToRead):
 
         headers = {"accept":"text/plain", "Authorization": f"Bearer {self.accessToken}"}
 
         files = {
-            "Files": open('C:/Users/Caleb/Documents/Rocketbot/Facturas/facturaRocketbotJulio.pdf', 'rb')
+            "Files": open(fileToRead, 'rb')
         }
 
 

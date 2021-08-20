@@ -76,7 +76,7 @@ try:
 
         skillId = eval(skillIdIframe)["skillId"]
 
-        resultRead = abbyy_I.transaction(skillId)
+        resultRead = abbyy_I.transaction(skillId, fileToRead)
 
         whereToStore = GetParams("whereToStore")
         SetVar(whereToStore, resultRead)
