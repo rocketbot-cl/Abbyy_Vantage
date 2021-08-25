@@ -14,7 +14,10 @@ function addOptions(skillsId) {
 
 data = getDataFromRB({module_name:"Abbyy_Vantage", command_name:"getHtmlSkillsId"})
 .then(data => {
+    var selectOption = {"id" : "-1", "name" : "---- Select Option ----", "type" : "nada"}
+    data["skillsId"].push(selectOption)
     skillsId = data["skillsId"]
+    skillsId.reverse()
     addOptions(skillsId)
 })
 
