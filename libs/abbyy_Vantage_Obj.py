@@ -77,19 +77,3 @@ class Abbyy_Vantage_Obj:
         lastResult = r.content.decode()
         return (lastResult)
 
-if __name__ == "__main__":
-    
-    abbyyObject = Abbyy_Vantage_Obj(sys.argv[1], sys.argv[2])
-
-    abbyyObject.requestToken()
-
-    b = abbyyObject.getSkills()
-
-
-    skillId = "02c6c40c-2ca8-404a-bb80-ee005bfde0c4"
-    skillId2 = "6009b2fc-c9ce-45f1-989a-64c98467b785"
-    skillId3 = "6009b2fc-c9ce-45f1-989a-64c98467b785"
-    probando2id = "ad7a9f20-fc97-46c1-97ee-b9ed03948824"
-
-    c = abbyyObject.transaction(probando2id)
-    print(c)
