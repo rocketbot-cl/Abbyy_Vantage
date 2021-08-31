@@ -1,6 +1,6 @@
 # Abbyy_Vantage
 
-Module to interact with Abbyy Vantage.
+Module to interact with Abbyy Vantage. You can send files and perform your skills, obtaining the output if you configured it that way.
 
 ----
 
