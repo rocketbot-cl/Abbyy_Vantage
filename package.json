@@ -1,10 +1,10 @@
 {
     "author":"Caleb Cipra",
-    "description": "Send files and perform skills with Abbyy Vantage.",
+    "description": "Module to send files and perform skills with Abbyy Vantage.",
     "disclaimer":"THERE IS NO WARRANTY FOR THE PROGRAM, TO THE EXTENT PERMITTED BY APPLICABLE LAW. EXCEPT WHEN OTHERWISE STATED IN WRITING THE COPYRIGHT HOLDERS AND/OR OTHER PARTIES PROVIDE THE PROGRAM “AS IS” WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. THE ENTIRE RISK AS TO THE QUALITY AND PERFORMANCE OF THE PROGRAM IS WITH YOU. SHOULD THE PROGRAM PROVE DEFECTIVE, YOU ASSUME THE COST OF ALL NECESSARY SERVICING, REPAIR OR CORRECTION.",
-    "version":"1.0",
+    "version":"1.0.1",
     "license": "MIT",
-    "homepage":"http://rocketbot.co/",
+    "homepage":"http://rocketbot.com/",
     "linux": false,
     "windows":true,
     "mac":false,
@@ -45,6 +45,10 @@
                             "es": "Nombre de usuario:",
                             "en": "Username:"
                         },
+                        "description": {
+                            "es": "Nombre de usuario de Abbyy Vantage",
+                            "en": "Abbyy Vantage username"
+                        },
                         "id": "username",
                         "css": "col-md-6"
                     },
@@ -58,6 +62,10 @@
                             "es": "Password",
                             "en": "Password:"
                         },
+                        "description": {
+                            "es": "Password de Abbyy Vantage",
+                            "en": "Abbyy Vantage password"
+                        },
                         "id": "password",
                         "css": "col-md-6"
                     },
@@ -70,6 +78,10 @@
                         "title": {
                             "es": "Asignar resultado a variable:",
                             "en": "Assign result to variable:"
+                        },
+                        "description": {
+                            "es": "Variable donde se almacenará el resultado de la conexión",
+                            "en": "Variable where the connection result will be stored"
                         },
                         "help": {
                             "es": "Nombre de variable sin {}",
@@ -112,9 +124,14 @@
                 "inputs": [
                     {
                         "type": "html",
+                        "placeholder": "skill",
                         "title": {
                             "es": "Seleccione el skill a usar",
                             "en": "Select the skill to use"
+                        },
+                        "description": {
+                            "es": "Skill a usar",
+                            "en": "Skill to use"
                         },
                         "src": "index.html",
                         "id": "html",
@@ -130,6 +147,10 @@
                         "title": {
                             "es": "Seleccionar un archivo:",
                             "en": "Select a file:"
+                        },
+                        "description": {
+                            "es": "Archivo a analizar",
+                            "en": "File to analyze"
                         },
                         "help": {
                             "es": "Ruta donde está el archivo",
@@ -147,6 +168,10 @@
                         "title": {
                             "es": "Asignar resultado a variable:",
                             "en": "Assign result to variable:"
+                        },
+                        "description": {
+                            "es": "Variable donde se almacenará el resultado",
+                            "en": "Variable where the result will be stored"
                         },
                         "help": {
                             "es": "Nombre de variable sin {}",
