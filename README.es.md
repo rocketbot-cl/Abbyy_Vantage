@@ -1,23 +1,23 @@
 # Abbyy Vantage
   
-Module to send files and perform skills with Abbyy Vantage.  
+Módulo para enviar archivos y realizar skills con Abbyy Vantage.  
 
 *Read this in other languages: [English](README.md), [Español](README.es.md).*
 
-## How to install this module
+## Como instalar este módulo
   
-__Download__ and __install__ the content in 'modules' folder in Rocketbot path  
+__Descarga__ e __instala__ el contenido en la carpeta 'modules' en la ruta de Rocketbot.  
 
 
 
 ## Overview
 
 
-1. Connects to Abbyy Vantage  
-Connects to Abbyy Vantage
+1. Conectar a Abbyy Vantage  
+Conectar a Abbyy Vantage
 
-2. Upload image to analyze  
-Upload an image to analyze  
+2. Subir imagen para analizar  
+Subir una imagen para analizar  
 
 
 
